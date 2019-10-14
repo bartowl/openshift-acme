@@ -3,6 +3,7 @@ package api
 const (
 	ForwardingRouteSuffix = "acme"
 	ExposerLabelName      = "acme.openshift.io/exposer"
+	ExposerExternalLabelName = "external"
 	ExposerForLabelName   = "acme.openshift.io/exposer-for"
 )
 
