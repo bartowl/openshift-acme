@@ -163,7 +163,7 @@ func (e *Exposer) Expose(c *acme.Client, domain string, token string) error {
 	labels := map[string]string{
 		api.ExposerLabelName:    "true",
 		api.ExposerForLabelName: string(e.route.UID),
-		api.ExposerLabelName: "true",
+		api.ExposerExternalLabelName: "true",
 	}
 
 	// Route can only point to a Service in the same namespace
