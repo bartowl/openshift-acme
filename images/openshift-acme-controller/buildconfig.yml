@@ -9,7 +9,7 @@ spec:
   source: 
     type: "Git"
     git:
-      uri: "https://github.com/bartowl/openshift-acme:master"
+      uri: "https://github.com/bartowl/openshift-acme"
   strategy: 
     type: "Docker"
     dockerStrategy:
