@@ -514,15 +514,10 @@ func (rc *RouteController) handle(key string) error {
 
 		case acme.StatusValid:
 			glog.V(4).Infof("Authorization %q for Route %s successfully validated", authorization.URI, key)
-			// workaround for domains longer than 63 characters
-			cn := routeReadOnly.Spec.Host
-			if len(cn)>63 {
-				cn=os.Getenv("CN_FOR_LONG_DOMAINS")
-			}
 			// provision cert
 			template := x509.CertificateRequest{
 				Subject: pkix.Name{
-					CommonName: cn,
+					CommonName: routeReadOnly.Spec.Host,
 				},
 			}
 			template.DNSNames = append(template.DNSNames, routeReadOnly.Spec.Host)
