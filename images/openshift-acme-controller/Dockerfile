@@ -1,9 +1,6 @@
 FROM openshift/origin-release:golang-1.10 as bin
 WORKDIR /go/src/github.com/tnozicka/openshift-acme
 COPY . .
-RUN pwd
-RUN ls -la /
-RUN find . -ls
 RUN make build
 
 FROM centos:7
