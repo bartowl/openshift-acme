@@ -21,7 +21,7 @@ spec:
       serviceAccountName: openshift-acme
       containers:
       - name: openshift-acme
-        image: " "
+        image: "docker-registry.default.svc:5000/letsencrypt-acme-build/openshift-acme-controller:latest"
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
