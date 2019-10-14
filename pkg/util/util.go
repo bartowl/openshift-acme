@@ -18,6 +18,10 @@ import (
 )
 
 func IsManaged(obj metav1.Object) bool {
+	label, ok := obj.GetLabels()["external"]
+	if ok && label == true { 
+		return true 
+	}
 	annotation, ok := obj.GetAnnotations()[api.TlsAcmeAnnotation]
 	if !ok {
 		return false
