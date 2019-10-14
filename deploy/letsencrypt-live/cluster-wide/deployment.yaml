@@ -35,5 +35,7 @@ spec:
               fieldPath: status.podIP
         - name: OPENSHIFT_ACME_ACMEURL
           value: "https://acme-v01.api.letsencrypt.org/directory"
+        - name: CN_FOR_LONG_DOMAINS
+          value: "example.com"
         - name: OPENSHIFT_ACME_LOGLEVEL
           value: "4"
