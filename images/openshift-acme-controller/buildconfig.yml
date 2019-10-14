@@ -13,7 +13,7 @@ spec:
   strategy: 
     type: "Docker"
     dockerStrategy:
-      dockerfilePath: iamges/openshift-acme-controller/Dockerfile
+      dockerfilePath: images/openshift-acme-controller/Dockerfile
   output: 
     to:
       kind: "ImageStreamTag"
