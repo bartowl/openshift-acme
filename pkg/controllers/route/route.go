@@ -516,7 +516,7 @@ func (rc *RouteController) handle(key string) error {
 			// provision cert
 			template := x509.CertificateRequest{
 				Subject: pkix.Name{
-					CommonName: routeReadOnly.Spec.Host,
+// remove CN: obsolete					CommonName: routeReadOnly.Spec.Host,
 				},
 			}
 			template.DNSNames = append(template.DNSNames, routeReadOnly.Spec.Host)
